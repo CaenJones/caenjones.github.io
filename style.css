@@ -1,0 +1,39 @@
+body{
+  color:#fff;
+  background:#1c1c1c;
+  margin:1em auto;
+  padding:1em;
+  max-width:55em;
+  font:14px monospace;
+}
+
+a {
+  color: #bb6767;
+  text-decoration: none;
+}
+
+a:active,a:hover,a:focus {
+  color: #eaeace;
+  text-decoration: none;
+}
+
+ul {
+  list-style: '• ';
+}
+
+.code {
+  color: #bbbbbb;
+  font-size: 14px;
+  padding: 2px 0px;
+  margin-top: 1px;
+}
+
+.colon {
+  width: 110px;
+  display: inline-block;
+}
+
+.footer p {
+  line-height: 15px;  
+  margin: 5px 0;
+}
