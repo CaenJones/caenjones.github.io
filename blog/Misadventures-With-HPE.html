@@ -2,7 +2,7 @@
 <h1>Misadventures With HPE</h1>
 <link href="style.css" rel="stylesheet">
 
-I love enterprise hardware, I also love spending money on stupid things. So when I saw an HP DL360 with 12 cores and 16 gigs of RAM for only 139 dollars, I jumped at the chance. About 5 minutes after my purchase, buyers regret kicked in, and I began thinking about the possible drawbacks and excuses to running a server in my room:
+I love enterprise hardware, I also love spending money on stupid things. So when I saw an <a href="https://a.co/d/5MwW0k8">HP DL360</a> with 12 cores and 16 gigs of RAM for only 139 dollars, I jumped at the chance. About 5 minutes after my purchase, buyers regret kicked in, and I began thinking about the possible drawbacks and excuses to running a server in my room:
 <br>
 <br>
 - It will sound like a jet engine (it's like a white noise machine!)
@@ -23,7 +23,7 @@ The lights dimmed both theatrically and literally as I plugged in the dual 750-w
 Sadly, my progress was halted by something that sent chills down my spine: An administrator password. My system, being so old that HP and YouTube had determined it did not exist, led me to frantically try fixes from different systems and at one low point a laptop. I tried removing the CMOS battery, using the incompatible recovery utility, and hopelessly hitting different keys on the boot screen. 
 <br>
 <br>
-Finally, a post from the HPE community, (something that would save me several times throughout my journey) told me to “switch position 5 of the system maintenance board to on” and restart the system. During the reboot, a single shrill beep emitted, waking my parents and shrieking at me to close the lid. Eventually, I was able to get the system back into working order and finally open the BiOS.
+Finally, a post from the <a href="https://community.hpe.com/t5/proliant-servers-ml-dl-sl/how-can-i-reset-my-bios-password-on-my-dl585-g7/td-p/7012609">HPE community</a>, (something that would save me several times throughout my journey) told me to “switch position 5 of the system maintenance board to on” and restart the system. During the reboot, a single shrill beep emitted, waking my parents and shrieking at me to close the lid. Eventually, I was able to get the system back into working order and finally open the BiOS.
 Thankfully, both Xeon X560s, all 8 sticks of 2 GB RAM, and 3 out of 4 HDDs (one found to be damaged in transit) showed up. I then enabled booting from USB in the hopes of installing Lubuntu, Debian10, or maybe XenServer. 
 <br>
 <br>
@@ -33,7 +33,7 @@ Unfortunately, it seemed like the HP gods were not done with me yet. When I boot
 My next suspect was a conflict with the HP and Intel SATA controllers, so I first disabled, and then removed the HP module to no avail. Finally, my hamster wheel brain settled on the solution. When one of the HDDs bricked, the RAID array was broken and needed to be re-created. 
 <br>
 <br>
-Through the good graces of one YouTube video, I was able to enter the RAID configuration menu and create a logical drive in RAID-0. I finally had all I needed to install an operating system except for one thing: networking.
+Through the good graces of <a href="https://www.youtube.com/watch?v=rz3x2m-6YAU">one YouTube video</a>, I was able to enter the RAID configuration menu and create a logical drive in RAID-0. I finally had all I needed to install an operating system except for one thing: networking.
 <br>
 <br>
 As I had to run the server in my room without ethernet access, I could not use the system in the conventional sense. Thankfully this had the relatively easy fix of a cheap network card bundled with the system's shockingly good PCI-E expansion options.
@@ -42,7 +42,7 @@ As I had to run the server in my room without ethernet access, I could not use t
 With Lubuntu installed and a shiny new dedicated GPU on the way, I was finally able to give my old Dell Optiplex and a laptop older than me the old heave-ho. The next day, I carefully put these machines in their final resting place, as shown below:
 <br>
 <br>
-<img src="https://media.tenor.com/ckWOJs_k6uAAAAAM/backwards-reverse.gif" alt="Ron Swanson Computer GIFs | Tenor"/>
+<img src="https://media.tenor.com/ckWOJs_k6uAAAAAM/backwards-reverse.gif" alt="I THREW IT AWAYY"/>
 <br>
 <br>
 Now that all is done, what conclusions would I draw from this? Well, I would say that buying an old HP Proliant server could be a great choice! If you have the patience, Google skills, and a good set of earplugs. It certainly can be infuriating often calls for jank workarounds, but in the end, there is no better system for the initial cost.
