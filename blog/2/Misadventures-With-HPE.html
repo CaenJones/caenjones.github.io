@@ -1,0 +1,54 @@
+<title>Misadventures With HPE</title>
+<h1>Misadventures With HPE</h1>
+<link href="style.css" rel="stylesheet">
+
+I love enterprise hardware, I also love spending money on stupid things. So when I saw an <a href="https://a.co/d/5MwW0k8">HP DL360</a> with 12 cores and 16 gigs of RAM for only 139 dollars, I jumped at the chance. About 5 minutes after my purchase, buyers regret kicked in, and I began thinking about the possible drawbacks and excuses to running a server in my room:
+<br>
+<br>
+- It will sound like a jet engine (it's like a white noise machine!)
+<br>
+- It guzzles power (no more than one of my desktops after I remove the power supply!)
+<br>
+- It has hard drives older than some members of my family (cheap SSDs fix all)
+<br>
+- The onboard graphics cannot run a DE (PCIE expansion options are great!)
+<br>
+<br>
+Nevertheless, I was excited to mess with a device so advanced for its time in <s>1999</s> 2016. After a long long wait, the server arrived in all its styrofoam and bubble wrap glory and after a long long time trying to lug it up the stairs to my room, I was ready to set it up. 
+<br>
+<br>
+The lights dimmed both theatrically and literally as I plugged in the dual 750-watt PSUs and cringed as the servers' fans roared to life. At this point, I was happy to correct my pessimistic self. The server did not sound like a jet engine! It sounded like a volcanic eruption. The house trembled, the server shook, and my parents yelled. Eventually, the server calmed down after the 10 minutes to enter the BiOS. 
+<br>
+<br>
+Sadly, my progress was halted by something that sent chills down my spine: An administrator password. My system, being so old that HP and YouTube had determined it did not exist, led me to frantically try fixes from different systems and at one low point a laptop. I tried removing the CMOS battery, using the incompatible recovery utility, and hopelessly hitting different keys on the boot screen. 
+<br>
+<br>
+Finally, a post from the <a href="https://community.hpe.com/t5/proliant-servers-ml-dl-sl/how-can-i-reset-my-bios-password-on-my-dl585-g7/td-p/7012609">HPE community</a>, (something that would save me several times throughout my journey) told me to “switch position 5 of the system maintenance board to on” and restart the system. During the reboot, a single shrill beep emitted, waking my parents and shrieking at me to close the lid. Eventually, I was able to get the system back into working order and finally open the BiOS.
+Thankfully, both Xeon X560s, all 8 sticks of 2 GB RAM, and 3 out of 4 HDDs (one found to be damaged in transit) showed up. I then enabled booting from USB in the hopes of installing Lubuntu, Debian10, or maybe XenServer. 
+<br>
+<br>
+Unfortunately, it seemed like the HP gods were not done with me yet. When I booted into Lubuntu, Debian, Fedora server, and Windows no drives were detected. I originally thought that the storage controller was set to IDE instead of AHCI, which made the devices undetectable. However, I as usual could not find any reference to this in the BiOS or documentation. 
+<br>
+<br>
+My next suspect was a conflict with the HP and Intel SATA controllers, so I first disabled, and then removed the HP module to no avail. Finally, my hamster wheel brain settled on the solution. When one of the HDDs bricked, the RAID array was broken and needed to be re-created. 
+<br>
+<br>
+Amazingly, <a href="https://www.youtube.com/watch?v=rz3x2m-6YAU">a single YouTube video</a> had the correct instructions,and I was able to enter the RAID configuration menu to create a logical drive in RAID-0. I finally had all I needed to install an operating system except for one thing: networking.
+<br>
+<br>
+As I had to run the server in my room without ethernet access, I could not use the system in the conventional sense. Thankfully this had the relatively easy fix of a cheap network card bundled with the system's shockingly good PCI-E expansion options.
+<br>
+<br>
+With Lubuntu installed and a shiny new dedicated GPU on the way, I was finally able to give my old Dell Optiplex and a laptop older than me the old heave-ho. The next day, I carefully put these machines in their final resting place, as shown below:
+<br>
+<br>
+<img src="https://media.tenor.com/ckWOJs_k6uAAAAAM/backwards-reverse.gif" alt="I THREW IT AWAYY"/>
+<br>
+<br>
+Now that all is done, what conclusions would I draw from this? Well, I would say that buying an old HP Proliant server could be a great choice! If you have the patience, Google skills, and a good set of earplugs. It certainly can be infuriating and often calls for jank workarounds, but in the end, there is no better system for the initial cost.
+<br>
+<br>
+Hope you enjoyed my suffering, see you again soon! :3
+<br>
+<br>
+<a href="https://caenjones.github.io">Back to home</a>
