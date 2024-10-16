@@ -23,9 +23,6 @@ The lights dimmed both theatrically and literally as I plugged in the dual 750-w
 Sadly, my progress was halted by something that sent chills down my spine: An administrator password. My system, being so old that HP and YouTube had determined it did not exist, led me to frantically try fixes from different systems and at one low point a laptop. I tried removing the CMOS battery, using the incompatible recovery utility, and hopelessly hitting different keys on the boot screen. 
 <br>
 <br>
-<img src="1.png" alt="1">
-<br>
-<br>
 Finally, a post from the <a href="https://community.hpe.com/t5/proliant-servers-ml-dl-sl/how-can-i-reset-my-bios-password-on-my-dl585-g7/td-p/7012609">HPE community</a>, (something that would save me several times throughout my journey) told me to “switch position 5 of the system maintenance board to on” and restart the system. During the reboot, a single shrill beep emitted, waking my parents and shrieking at me to close the lid. Eventually, I was able to get the system back into working order and finally open the BiOS.
 Thankfully, both Xeon X560s, all 8 sticks of 2 GB RAM, and 3 out of 4 HDDs (one found to be damaged in transit) showed up. I then enabled booting from USB in the hopes of installing Lubuntu, Debian10, or maybe XenServer. 
 <br>
@@ -43,9 +40,6 @@ My next suspect was a conflict with the HP and Intel SATA controllers, so I firs
 <br>
 <br>
 Amazingly, <a href="https://www.youtube.com/watch?v=rz3x2m-6YAU">a single YouTube video</a> had the correct instructions,and I was able to enter the RAID configuration menu to create a logical drive in RAID-0. I finally had all I needed to install an operating system except for one thing: networking.
-<br>
-<br>
-<img src="4.png" alt="4">
 <br>
 <br>
 As I had to run the server in my room without ethernet access, I could not use the system in the conventional sense. Thankfully this had the relatively easy fix of a cheap network card bundled with the system's shockingly good PCI-E expansion options.
